@@ -58,6 +58,10 @@
 // const message2 = `私の名前は${name}です．年齢は${age}です`;
 // console.log(message2);
 
+// テンプレート文字列を用いたショートコーディング
+// console.log("abcde".split``); //["a", "b", "c", "d", "e"]
+// console.log([1, 2, 3].join``); // 123
+
 /**
  * アロー関数
  */
@@ -153,3 +157,77 @@
 // arr8[0] = 100;
 // console.log(arr8); // [100, 20]
 // console.log(arr4); // [100, 20]
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+// 従来の手法
+// const nameArr = ["田中", "山田", "高橋"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です。`);
+// }
+
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+// nameArr.map((name) => console.log(name));
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newnumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newnumArr); // [1, 3, 5]
+
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "高橋") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr); // ["田中さん", "山田さん", "高橋"]
+
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 < 0 ? "trueです" : "falseです";
+// console.log(val1); // falseです
+
+// const num = 1300;
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています" : num1 + num2;
+// };
+
+// console.log(checkSum(100, 20)); // 100を超えています
+// console.log(checkSum(10, 20)); // 30
+
+/**
+ * 論理演算子
+ */
+// const flag1 = true;
+// const flag2 = true;
+// if (flag1 || flag2) {
+//   console.log("1か2はtrueです");
+// }
+// if (flag1 && flag2) {
+//   console.log("1も2はtrueです");
+// }
+
+// // || は左側がfalseなら右側を返す。
+// const num = null;
+// const fee = num || "金額未設定です";
+// console.log(fee); // 金額未設定です
+
+// // && は左側がtrueなら右側を返す。
+// const num2 = 100;
+// const fee2 = num2 && "何か設定されました";
+// console.log(fee2); // "何か設定されました"
